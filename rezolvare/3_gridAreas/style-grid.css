@@ -1,0 +1,42 @@
+/* GRID AREA  */
+
+.site {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: auto 1fr 2fr;
+    grid-template-areas: 
+      "title title title"
+      "main main masthead"
+      "main main sidebar"
+      "footer footer footer";
+}
+
+@media screen and (max-width: 700px) {
+    .site {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+          "title title"
+          "main masthead"
+          "main sidebar"
+          "footer footer";
+    }
+}
+
+.masthead {
+    grid-area: masthead;
+}
+
+.page-title {
+    grid-area: title;
+}
+
+.main-content {
+    grid-area: main;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer-content {
+    grid-area: footer;
+}
